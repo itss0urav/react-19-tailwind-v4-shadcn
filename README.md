@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# React 19 + TypeScript + Vite + Tailwind CSS v4 + shadcn/ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application template built with the latest technologies for optimal developer experience and performance.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - Latest React with improved performance and new features
+- **TypeScript** - Type-safe JavaScript development
+- **Vite** - Fast build tool with HMR (Hot Module Replacement)
+- **Tailwind CSS v4** - Latest utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible component library
+- **Lucide React** - Beautiful & consistent icon library
 
-## Expanding the ESLint configuration
+## 📦 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- ⚡ Lightning fast development with Vite
+- 🎨 Modern UI components with shadcn/ui
+- 🎯 Type-safe development with TypeScript
+- 🔧 ESLint configuration for code quality
+- 📱 Responsive design with Tailwind CSS
+- 🎭 Beautiful icons with Lucide React
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. **Install dependencies**
+  ```bash
+  yarn install
+  ```
+
+2. **Start development server**
+  ```bash
+  yarn dev
+  ```
+
+3. **Build for production**
+  ```bash
+  yarn build
+  ```
+
+4. **Preview production build**
+  ```bash
+  yarn preview
+  ```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── lib/           # Utility functions
+├── assets/        # Static assets
+├── App.tsx        # Main application component
+├── main.tsx       # Application entry point
+└── index.css      # Global styles with Tailwind
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🎨 Adding Components
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+This project uses shadcn/ui components. To add new components:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn shadcn-ui@latest add [component-name]
 ```
+
+## 🔧 Configuration
+
+- **shadcn/ui**: Configured in `components.json`
+- **Tailwind CSS**: Configuration in `tailwind.config.js` (if needed)
+- **TypeScript**: Configuration in `tsconfig.json` and `tsconfig.app.json`
+- **ESLint**: Configuration in `eslint.config.js`
+
