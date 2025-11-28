@@ -1,0 +1,66 @@
+import { VehicleType } from '@/types';
+
+export const vehicleTypes: VehicleType[] = [
+  {
+    id: '1',
+    name: 'Tempo Traveller',
+    seatingCapacity: '12-17 Seater',
+    bestFor: ['Small groups', 'Family trips', 'Weekend getaways'],
+    features: ['AC', 'Pushback seats', 'Music system', 'Charging points'],
+    luggage: 'Ample space for luggage',
+    pricePerKm: '₹18',
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80',
+  },
+  {
+    id: '2',
+    name: 'Mini Bus',
+    seatingCapacity: '20-25 Seater',
+    bestFor: ['Medium groups', 'Office outings', 'Extended family trips'],
+    features: ['AC', 'Comfortable seating', 'LCD TV', 'Music system'],
+    luggage: 'Large luggage compartment',
+    pricePerKm: '₹25',
+    image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80',
+  },
+  {
+    id: '3',
+    name: 'Standard Bus',
+    seatingCapacity: '35-45 Seater',
+    bestFor: ['Large groups', 'College tours', 'Corporate events'],
+    features: ['AC/Non-AC', 'Pushback seats', 'TV', 'Mic system'],
+    luggage: 'Overhead racks + Under-deck storage',
+    pricePerKm: '₹35',
+    image: 'https://images.unsplash.com/photo-1557223562-6c77ef16210f?w=800&q=80',
+  },
+  {
+    id: '4',
+    name: 'Sleeper Bus',
+    seatingCapacity: '30-40 Sleeper berths',
+    bestFor: ['Long distance travel', 'Overnight journeys'],
+    features: ['AC', 'Individual berths', 'Curtains', 'Charging points', 'Blankets'],
+    luggage: 'Under-deck storage',
+    pricePerKm: '₹40',
+    image: 'https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&q=80',
+  },
+  {
+    id: '5',
+    name: 'Luxury Bus',
+    seatingCapacity: '30-45 Seater (2x1)',
+    bestFor: ['Premium travel', 'VIP groups', 'Comfort seekers'],
+    features: ['AC', '2x1 Sleeper/Seater', 'WiFi', 'TV', 'Toilet', 'Mini pantry'],
+    luggage: 'Premium storage space',
+    pricePerKm: '₹50',
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80',
+  },
+  {
+    id: '6',
+    name: 'Maharaja Bus',
+    seatingCapacity: '20-30 Seater (Ultra-wide)',
+    bestFor: ['Wedding parties', 'VVIPs', 'Ultimate comfort'],
+    features: ['AC', 'Fully reclining seats', 'Premium interior', 'TV', 'WiFi', 'Toilet', 'Kitchen'],
+    luggage: 'Maximum storage',
+    pricePerKm: '₹70',
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80',
+  },
+];
+
+export const fleetShowcase = vehicleTypes.slice(0, 4);
