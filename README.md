@@ -1,72 +1,102 @@
-# React 19 + TypeScript + Vite + Tailwind CSS v4 + shadcn/ui
+# React 19 + Tailwind v4 + shadcn/ui Template
 
-A modern React application template built with the latest technologies for optimal developer experience and performance.
+A minimal, production-ready template with the latest technologies.
 
-## 🚀 Tech Stack
+## Tech Stack
 
-- **React 19** - Latest React with improved performance and new features
-- **TypeScript** - Type-safe JavaScript development
-- **Vite** - Fast build tool with HMR (Hot Module Replacement)
-- **Tailwind CSS v4** - Latest utility-first CSS framework
-- **shadcn/ui** - Beautiful, accessible component library
-- **Lucide React** - Beautiful & consistent icon library
+- **React** 19.2 - Latest React with concurrent features
+- **Vite** 7.2 - Fast build tool with HMR
+- **Tailwind CSS** 4.1 - Utility-first CSS with OKLch colors
+- **shadcn/ui** - Ready for component installation
+- **TypeScript** 5.9 - Type-safe development
+- **ESLint** 9 - Modern flat config linting
 
-## 📦 Features
+## Getting Started
 
-- ⚡ Lightning fast development with Vite
-- 🎨 Modern UI components with shadcn/ui
-- 🎯 Type-safe development with TypeScript
-- 🔧 ESLint configuration for code quality
-- 📱 Responsive design with Tailwind CSS
-- 🎭 Beautiful icons with Lucide React
+```bash
+# Install dependencies
+yarn install
 
-## 🛠️ Getting Started
+# Start development server
+yarn dev
 
-1. **Install dependencies**
-  ```bash
-  yarn install
-  ```
+# Type check
+yarn type-check
 
-2. **Start development server**
-  ```bash
-  yarn dev
-  ```
+# Build for production
+yarn build
 
-3. **Build for production**
-  ```bash
-  yarn build
-  ```
+# Preview production build
+yarn preview
+```
 
-4. **Preview production build**
-  ```bash
-  yarn preview
-  ```
+## Adding shadcn/ui Components
 
-## 📁 Project Structure
+This template is pre-configured for shadcn/ui. Add components as needed:
+
+```bash
+# Add a single component
+npx shadcn@latest add button
+
+# Add multiple components
+npx shadcn@latest add card dialog dropdown-menu
+
+# Add all components
+npx shadcn@latest add --all
+```
+
+## Adding Routing
+
+Install react-router-dom for client-side routing:
+
+```bash
+yarn add react-router-dom
+```
+
+Then update `src/App.tsx`:
+
+```tsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+```
+
+## Project Structure
 
 ```
 src/
-├── components/     # Reusable UI components
-├── lib/           # Utility functions
-├── assets/        # Static assets
-├── App.tsx        # Main application component
-├── main.tsx       # Application entry point
-└── index.css      # Global styles with Tailwind
-
+├── components/
+│   └── ui/          # shadcn/ui components (add via CLI)
+├── lib/
+│   └── utils.ts     # Utility functions (cn helper)
+├── App.tsx          # Root component
+├── main.tsx         # Entry point
+└── index.css        # Global styles & Tailwind config
 ```
 
-## 🎨 Adding Components
+## Features
 
-This project uses shadcn/ui components. To add new components:
+- **Path Aliases**: Use `@/` to import from `src/`
+- **Dark Mode**: Toggle with `.dark` class on html/body
+- **CSS Variables**: Full theme customization via CSS variables
+- **OKLch Colors**: Modern perceptually uniform color space
+- **Production Build**: Optimized chunks for React vendor code
 
-```bash
-yarn shadcn-ui@latest add [component-name]
-```
+## Scripts
 
-## 🔧 Configuration
-
-- **shadcn/ui**: Configured in `components.json`
-- **Tailwind CSS**: Configuration in `tailwind.config.js` (if needed)
-- **TypeScript**: Configuration in `tsconfig.json` and `tsconfig.app.json`
-- **ESLint**: Configuration in `eslint.config.js`
-
+| Script | Description |
+|--------|-------------|
+| `yarn dev` | Start development server |
+| `yarn build` | Type check and build for production |
+| `yarn preview` | Preview production build locally |
+| `yarn lint` | Run ESLint |
+| `yarn type-check` | Run TypeScript type checking |
